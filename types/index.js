@@ -1,5 +1,5 @@
 /* @flow */
-import { Animated, StyleSheet } from 'react-native';
+import { Animated, StyleSheet, FlatListProps } from 'react-native';
 
 export type Styles = StyleSheet.Styles;
 
@@ -56,7 +56,7 @@ type CarouselDefaultProps = {
   useNativeDriver: boolean,
 };
 
-export type CarouselProps = CarouselDefaultProps & {
+export type CarouselProps = CarouselDefaultProps & FlatListProps & {
   index?: number,
   style?: Styles,
   flatListStyle?: Styles,
