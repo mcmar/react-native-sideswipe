@@ -119,7 +119,6 @@ export default class SideSwipe extends Component<CarouselProps, State> {
         {...this.panResponder.panHandlers}
       >
         <AnimatedFlatList
-          {...this.props}
           horizontal
           contentContainerStyle={[
             { paddingHorizontal: contentOffset },
@@ -149,6 +148,10 @@ export default class SideSwipe extends Component<CarouselProps, State> {
               animatedValue: animatedValue,
             })
           }
+
+          removeClippedSubviews={this.props.removeClippedSubviews}
+          windowSize={this.props.windowSize}
+          initialNumToRender={this.props.initialNumToRender}
         />
       </View>
     );
