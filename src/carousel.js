@@ -119,6 +119,7 @@ export default class SideSwipe extends Component<CarouselProps, State> {
         {...this.panResponder.panHandlers}
       >
         <AnimatedFlatList
+          {...this.props}
           horizontal
           contentContainerStyle={[
             { paddingHorizontal: contentOffset },
