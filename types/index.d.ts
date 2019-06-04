@@ -1,5 +1,5 @@
 import { Component, ReactNode } from 'react';
-import { StyleProp, ViewStyle, Animated } from 'react-native';
+import { StyleProp, ViewStyle, Animated, FlatListProps } from 'react-native';
 
 declare type CarouselGestureState = {
   stateID: number;
@@ -41,7 +41,7 @@ declare type CarouselRenderProps<T> = {
   animatedValue: Animated.Value;
 };
 
-declare type CarouselProps<T> = {
+declare type CarouselProps<T> = FlatListProps & {
   /**
    * applied to the content container within FlatList.
    * ```
